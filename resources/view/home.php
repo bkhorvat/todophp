@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="ru">
+<?php include $_SERVER['DOCUMENT_ROOT']."/resources/view/template/head template.php"?>
+
 <head>
-	<title>Список дел</title>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
-
+    <title>Домашняя страница</title>
 </head>
-<body>
 
+<body>
 	<div class="container">
 		<h1>Список дел</h1>
 		<form action="/app/add task.php" method="post">
