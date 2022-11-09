@@ -1,8 +1,8 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'].'/db/regist.php';
 
-  $login = filter_var(trim($_POST['login']), FILTER_SANITIZE_STRING);
-  $pass = filter_var(trim($_POST['pass']), FILTER_SANITIZE_STRING);
+  $login = trim($_POST['login']);
+  $pass = trim($_POST['pass']);
 
   $pass = md5($pass."asdsafaf");
 
