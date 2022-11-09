@@ -27,7 +27,7 @@
           <input type="password" name="pass" id="pass" class="form-control" placeholder="Введите пароль"><br>
           <button type="submit" name="button" class="btn btn-success">Войти</button>
           </form>
-					<p>Чтобы зареестрироватся нажми <a href="regist.php">здесь</a></p>
+					<p>Чтобы зареестрироватся нажми <a href="registration.php">здесь</a></p>
         </div>
       </div>
 		<?php else: ?>
