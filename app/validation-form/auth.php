@@ -1,5 +1,5 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'].'/db/regist.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/app/db/regist.php';
 
   $login = trim($_POST['login']);
   $pass = trim($_POST['pass']);
