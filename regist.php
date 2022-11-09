@@ -14,7 +14,7 @@
   <div class="container mt-4">
 
 		<?php
-			if($_COOKIE['id'] == ''):
+			if(!array_key_exists('id', $_COOKIE)):
 		 ?>
 
       <div class="row">
