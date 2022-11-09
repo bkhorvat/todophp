@@ -1,5 +1,5 @@
 <?php
-  require 'db/configDB.php';
+  require $_SERVER['DOCUMENT_ROOT'] . '/database/PDO config DB.php';
 
   $id = $_GET['id'];
 

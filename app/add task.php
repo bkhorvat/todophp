@@ -7,7 +7,7 @@
     exit();
   }
 
-  require 'db/configDB.php';
+  require $_SERVER['DOCUMENT_ROOT'] . '/database/PDO config DB.php';
 
   $sql = 'INSERT INTO tasks(task, user_id) VALUES(:task, :user_id)';
   $query = $pdo->prepare($sql);
