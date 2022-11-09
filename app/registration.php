@@ -22,7 +22,7 @@
         </div>
         <div class="col">
           <h1>Форма регистрации</h1>
-          <form action="validation-form/chek.php" method="post">
+          <form action="validation-form/check registration form.php" method="post">
           <input type="text" name="login" id="login" class="form-control" placeholder="Введите логин"><br>
           <input type="email" name="email" id="email" class="form-control" placeholder="Введите email"><br>
           <input type="text" name="name" id="name" class="form-control" placeholder="Введите имя"><br>

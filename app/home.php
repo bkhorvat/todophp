@@ -13,7 +13,7 @@
 
 	<div class="container">
 		<h1>Список дел</h1>
-		<form action="add.php" method="post">
+		<form action="add task.php" method="post">
 			<input type="text" name="task" id="task" placeholder="Нужно сделать.." class="form-control">
 			<button type="submit" name="sendTask" class="btn btn-success">Отправить</button>
 		</form>
@@ -27,7 +27,7 @@
 			$query = $pdo->query('SELECT * FROM `tasks` ORDER BY `id`DESC');
 			while($row = $query->fetch(PDO::FETCH_OBJ)) {
 				if($row->user_id == $user_id){
-					echo '<li><b>'.$row->task.'</b><a href="delete.php?id='.$row->id.'"<button>Delete</button></a></li>';
+					echo '<li><b>'.$row->task.'</b><a href="delete task.php?id='.$row->id.'"<button>Delete</button></a></li>';
 				}	
 			}
 			echo '</ul>';

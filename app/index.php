@@ -31,8 +31,8 @@
         </div>
       </div>
 		<?php else: ?>
-			<p>Привет <?=$_COOKIE['name']?>. Чтобы выйти нажмите <a href="exit.php">здесь</a>.</p>
-		<?php require 'index2.php';?>
+			<p>Привет <?=$_COOKIE['name']?>. Чтобы выйти нажмите <a href="log out.php">здесь</a>.</p>
+		<?php require 'home.php';?>
 		<?php endif;?>
   </div>
 
