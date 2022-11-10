@@ -5,19 +5,10 @@
 
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                 <?php if (array_key_exists('id', $_COOKIE)): ?>
-                <li><a href="#" class="nav-link px-2 text-secondary">Home</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">Pricing</a></li>
-                <li><a href="#" class="nav-link px-2 text-white">FAQs</a></li>
+                    <li><a href="home.php" class="nav-link px-2 text-secondary">Home</a></li>
                 <?php endif; ?>
-                <li><a href="#" class="nav-link px-2 text-secondary">About</a></li>
+                <li><a href="about.php" class="nav-link px-2 text-secondary">About</a></li>
             </ul>
-
-            <?php if (array_key_exists('id', $_COOKIE)): ?>
-            <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3">
-                <input type="search" class="form-control form-control-dark" placeholder="Search..." aria-label="Search">
-            </form>
-            <?php endif; ?>
 
             <div class="text-end">
                 <?php if (!array_key_exists('id', $_COOKIE)): ?>
@@ -31,4 +22,15 @@
         </div>
     </div>
 </header>
+<?php if (!array_key_exists('id', $_COOKIE) && ($_SERVER['REQUEST_URI'] != '/resources/view/'
+                                                && $_SERVER['REQUEST_URI'] != '/resources/view/index.php'
+                                                && $_SERVER['REQUEST_URI'] != '/resources/view/registration.php'
+                                                && $_SERVER['REQUEST_URI'] != '/')
+) {
+
+    header('Location: /resources/view/');
+    var_dump($_SERVER['HTTP_HOST']);
+    var_dump($_SERVER['REQUEST_URI']);
+} ?>
+
 
