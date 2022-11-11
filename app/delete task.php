@@ -8,4 +8,3 @@
   $query->execute([$id]);
 
 header('Location: /');
- ?>

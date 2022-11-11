@@ -56,7 +56,7 @@
                                   if($row->user_id == $user_id){
                                       echo '
                         <div>
-                        <a href="#" class="link-secondary"><small>Редактировать</small></a>
+                        <a href="edit task.php?id='.$row->id.'" class="link-secondary"><small>Редактировать</small></a>
                         <a href="../../app/delete task.php?id='.$row->id.'" class="link-danger"><small>Удалить</small></a>
                         </div>
                         <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
