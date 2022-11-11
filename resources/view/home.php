@@ -9,7 +9,7 @@
             <span class="mdl-layout-title" id="title-sep">&nbsp;&gt;&nbsp;</span>
           <span class="mdl-layout-title" id="subtitle"></span>
           <div class="mdl-layout-spacer"></div>
-            <h3>Cписок дел</h3>
+            <h3>Добавить задание</h3>
         </div>
       </header>
       <div class="demo-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
@@ -54,12 +54,18 @@
                               $query = $pdo->query('SELECT * FROM `tasks` ORDER BY `id`DESC');
                               while($row = $query->fetch(PDO::FETCH_OBJ)) {
                                   if($row->user_id == $user_id){
-                                      echo '<a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
-                        <div class="d-flex w-100 align-items-center justify-content-between">
-                            <strong class="mb-1">'.$row->task.'</strong>
-                            <small>Wed</small>
+                                      echo '
+                        <div>
+                        <a href="#" class="link-secondary"><small>Редактировать</small></a>
+                        <a href="../../app/delete task.php?id='.$row->id.'" class="link-danger"><small>Удалить</small></a>
                         </div>
-                        <div class="col-10 mb-1 small">Some placeholder content in a paragraph below the heading and date.</div>
+                        <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
+                        <div class="row d-flex w-100 align-items-center justify-content-between">
+                            <strong class="mb-1">'.$row->title.'</strong>
+                        </div>
+                        <div class="row col-10 mb-1 small">'.$row->description.'</div>
+                        
+                            <div><small> От '.$row->dateStart.' до '.$row->dateEnd.'</small></div>
                     </a>';
                                   }
                               }
@@ -72,10 +78,35 @@
                   <div class="col">
                       <form action="/app/add task.php" method="post">
                           <input type="text" name="title" id="title" placeholder="Заголовок" class="form-control">
-                          <input type="textarea" name="description" id="description" placeholder="Описание" class="form-control">
-                          <input type="date" name="dateStart" id="dateStart" placeholder="Описание" class="form-control">
-                          <input type="date" name="description" id="description" placeholder="Описание" class="form-control">
-                          <button type="submit" name="sendTask" class="w-100 btn btn-lg btn-primary mt-3">Отправить</button>
+                          <textarea rows="3" name="description" id="description" placeholder="Описание" class="form-control"></textarea>
+                          <div class="row">
+                              <div class="col">
+                                  <div class="row">
+                                      <div class="col">
+                                          <label for="dateStart">Дата начала</label>
+                                          <input type="date" name="dateStart" id="dateStart" placeholder="Описание" class="form-control">
+                                      </div>
+                                      <div class="col">
+                                          <label for="dateStart">Времья начала</label>
+                                          <input type="time" name="timeStart" id="timeStart" placeholder="Описание" class="form-control">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="col">
+                                  <div class="row">
+                                      <div class="col">
+                                         <label for="dateEnd">Дата конца</label>
+                                         <input type="date" name="dateEnd" id="dateEnd" placeholder="Дата конца" class="form-control">
+                                      </div>
+                                      <div class="col">
+                                          <label for="dateEnd">Времья конца</label>
+                                          <input type="time" name="timeEnd" id="timeEnd" placeholder="Времья конца" class="form-control">
+                                      </div>
+                                  </div>
+
+                              </div>
+                              <button type="submit" name="sendTask" class="w-100 btn btn-lg btn-primary mt-3">Отправить</button>
+                          </div>
                       </form>
                   </div>
               </div>
