@@ -5,7 +5,7 @@ if (!array_key_exists('id', $_COOKIE)):
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/resources/view/layout/head.php" ?>
 
 <head>
-    <title>Вход</title>
+    <title>Sign in</title>
 </head>
 
 <body>
@@ -24,8 +24,8 @@ if (!array_key_exists('id', $_COOKIE)):
                 <form action="/app/validation-form/auth.php" method="post">
                     <!-- Email input -->
                     <div class="form-outline mb-4">
-                        <input type="text" id="login" name="login" class="form-control"/>
-                        <label class="form-label" for="login">Login</label>
+                        <input type="email" id="email" name="email" class="form-control"/>
+                        <label class="form-label" for="login">Email</label>
                     </div>
 
                     <!-- Password input -->

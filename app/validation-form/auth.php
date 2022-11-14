@@ -1,12 +1,12 @@
 <?php
 require $_SERVER['DOCUMENT_ROOT'] . '/database/Mysqli config DB.php';
 
-  $login = trim($_POST['login']);
+  $email = trim($_POST['email']);
   $pass = trim($_POST['pass']);
 
   $pass = md5($pass."asdsafaf");
 
-  $result = $mysql->query("SELECT * FROM `users` WHERE `login` = '$login' AND `pass` = '$pass'");
+  $result = $mysql->query("SELECT * FROM `users` WHERE `email` = '$email' AND `pass` = '$pass'");
   $user = $result->fetch_assoc();
 
   if($user == 0) {

@@ -36,8 +36,44 @@
                             </li>
                         <?php endif; ?>
                         <?php if (array_key_exists('id', $_COOKIE)): ?>
-                            <li class="nav-item">
-                                <a class="nav-link" href="/app/log out.php">Log out</a>
+                            <!-- Icon dropdown -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link me-3 me-lg-0 dropdown-toggle hidden-arrow" href="#"
+                                   id="navbarDropdown" role="button"
+                                   data-mdb-toggle="dropdown" aria-expanded="false">
+                                    <i class="flag-united-kingdom flag m-0"></i>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <li>
+                                        <a class="dropdown-item" href="#"><i class="flag-united-kingdom flag"></i>English
+                                            <i class="fa fa-check text-success ms-2"></i></a>
+                                    </li>
+                                    <li>
+                                        <hr class="dropdown-divider"/>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"><i class="flag-poland flag"></i>Polski</a>
+                                    </li>
+                                    <li>
+                                        <a class="dropdown-item" href="#"><i class="flag-ukraine flag"></i>Укаїнська</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            <!-- Avatar -->
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
+                                   id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle"
+                                         height="22" alt="Avatar"
+                                         loading="lazy"/>
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">My profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li><a class="dropdown-item" href="/app/log out.php">Logout</a></li>
+                                </ul>
                             </li>
                         <?php endif; ?>
                     </ul>
@@ -48,6 +84,12 @@
     </nav>
     <!-- Navbar -->
 </header>
+
+<!-- MDB -->
+<script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.0.0/mdb.min.js"
+></script>
 
 <?php if (!array_key_exists('id', $_COOKIE)
     &&

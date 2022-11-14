@@ -1,7 +1,7 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/resources/view/layout/head.php" ?>
 
 <head>
-    <title>Форма регистрации</title>
+    <title>Register</title>
 </head>
 
 <body>
@@ -20,13 +20,12 @@
             </div>
 
             <div class="col mt-5">
-                <h1 class="h3 mb-3 fw-normal">Форма регистрации</h1>
+                <h1 class="h3 mb-3 fw-normal">Register</h1>
                 <form action="../../app/validation-form/check%20registration%20form.php" method="post">
-                    <input type="text" name="login" id="login" class="form-control" placeholder="Введите логин"><br>
-                    <input type="email" name="email" id="email" class="form-control" placeholder="Введите email"><br>
-                    <input type="text" name="name" id="name" class="form-control" placeholder="Введите имя"><br>
-                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Введите пароль"><br>
-                    <button type="submit" name="button" class="w-100 btn btn-lg btn-primary">Зарегистрировать</button>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Name"><br>
+                    <input type="email" name="email" id="email" class="form-control" placeholder="Email"><br>
+                    <input type="password" name="pass" id="pass" class="form-control" placeholder="Password"><br>
+                    <button type="submit" name="button" class="w-100 btn btn-lg btn-primary">Register now</button>
 
                     <!-- Register buttons -->
                     <div class="text-center">

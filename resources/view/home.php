@@ -1,14 +1,17 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . "/resources/view/layout/head.php" ?>
 
 <head>
+    <title>Home</title>
     <style>
         #list1 .form-control {
             border-color: transparent;
         }
+
         #list1 .form-control:focus {
             border-color: transparent;
             box-shadow: none;
         }
+
         #list1 .select-input.form-control[readonly]:not([disabled]) {
             background-color: #fbfbfb;
         }
@@ -27,22 +30,22 @@
 
                         <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
                             <i class="fas fa-check-square me-1"></i>
-                            <u>My Todo-s</u>
+                            <u>My Todo list</u>
                         </p>
 
                         <div class="pb-2">
                             <div class="card">
                                 <div class="card-body">
-                                    <div class="d-flex flex-row align-items-center">
-                                        <input type="text" class="form-control form-control-lg"
-                                               id="exampleFormControlInput1"
-                                               placeholder="Add new...">
-                                        <a href="#!" data-mdb-toggle="tooltip" title="Set due date"><i
-                                                    class="fas fa-calendar-alt fa-lg me-3"></i></a>
-                                        <div>
-                                            <button type="button" class="btn btn-primary">Add</button>
+                                    <form action="/app/add task.php" method="post">
+                                        <div class="d-flex flex-row align-items-center">
+                                            <input type="text" class="form-control form-control-lg"
+                                                   id="title" name="title"
+                                                   placeholder="Add new task...">
+                                            <div>
+                                                <button type="submit" class="btn btn-primary">Add</button>
+                                            </div>
                                         </div>
-                                    </div>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -65,96 +68,29 @@
                             <a href="#!" style="color: #23af89;" data-mdb-toggle="tooltip" title="Ascending"><i
                                         class="fas fa-sort-amount-down-alt ms-2"></i></a>
                         </div>
+                        <?php
+                        require $_SERVER['DOCUMENT_ROOT'] . '/database/PDO config DB.php';
 
-                        <ul class="list-group list-group-horizontal rounded-0 bg-transparent">
-                            <li
-                                    class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
-                                <div class="form-check">
-                                    <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked1"
-                                           aria-label="..." checked/>
-                                </div>
-                            </li>
-                            <li
-                                    class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
-                                <p class="lead fw-normal mb-0">Buy groceries for next week</p>
-                            </li>
-                            <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
-                                <div class="d-flex flex-row justify-content-end mb-1">
-                                    <a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
-                                                class="fas fa-pencil-alt me-3"></i></a>
-                                    <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
-                                                class="fas fa-trash-alt"></i></a>
-                                </div>
-                                <div class="text-end text-muted">
-                                    <a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="Created date">
-                                        <p class="small mb-0"><i class="fas fa-info-circle me-2"></i>28th Jun 2020</p>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="list-group list-group-horizontal rounded-0">
-                            <li
-                                    class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
-                                <div class="form-check">
-                                    <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked2"
-                                           aria-label="..."/>
-                                </div>
-                            </li>
-                            <li
-                                    class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
-                                <p class="lead fw-normal mb-0">Renew car insurance</p>
-                            </li>
-                            <li class="list-group-item px-3 py-1 d-flex align-items-center border-0 bg-transparent">
-                                <div
-                                        class="py-2 px-3 me-2 border border-warning rounded-3 d-flex align-items-center bg-light">
-                                    <p class="small mb-0">
-                                        <a href="#!" data-mdb-toggle="tooltip" title="Due on date">
-                                            <i class="fas fa-hourglass-half me-2 text-warning"></i>
-                                        </a>
-                                        28th Jun 2020
-                                    </p>
-                                </div>
-                            </li>
-                            <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
-                                <div class="d-flex flex-row justify-content-end mb-1">
-                                    <a href="#!" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
-                                                class="fas fa-pencil-alt me-3"></i></a>
-                                    <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
-                                                class="fas fa-trash-alt"></i></a>
-                                </div>
-                                <div class="text-end text-muted">
-                                    <a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="Created date">
-                                        <p class="small mb-0"><i class="fas fa-info-circle me-2"></i>28th Jun 2020</p>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
-                        <ul class="list-group list-group-horizontal rounded-0 mb-2">
-                            <li
-                                    class="list-group-item d-flex align-items-center ps-0 pe-3 py-1 rounded-0 border-0 bg-transparent">
-                                <div class="form-check">
-                                    <input class="form-check-input me-0" type="checkbox" value="" id="flexCheckChecked3"
-                                           aria-label="..."/>
-                                </div>
-                            </li>
-                            <li
-                                    class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
-                                <p class="lead fw-normal mb-0 bg-light w-100 ms-n2 ps-2 py-1 rounded">Sign up for online
-                                    course</p>
-                            </li>
-                            <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
-                                <div class="d-flex flex-row justify-content-end mb-1">
-                                    <a href="#!" class="text-danger" data-mdb-toggle="tooltip" title="Delete todo"><i
-                                                class="fas fa-trash-alt"></i></a>
-                                </div>
-                                <div class="text-end text-muted">
-                                    <a href="#!" class="text-muted" data-mdb-toggle="tooltip" title="Created date">
-                                        <p class="small mb-0"><i class="fas fa-info-circle me-2"></i>28th Jun 2020</p>
-                                    </a>
-                                </div>
-                            </li>
-                        </ul>
+                        $user_id = $_COOKIE['id'];
 
+                        $query = $pdo->query('SELECT * FROM `tasks` ORDER BY `id`DESC');
+                        while ($row = $query->fetch(PDO::FETCH_OBJ)) {
+                            if ($row->user_id == $user_id) {
+
+                                echo '<ul class="list-group list-group-horizontal rounded-0 bg-transparent">
+                                        <li
+                                                class="list-group-item px-3 py-1 d-flex align-items-center flex-grow-1 border-0 bg-transparent">
+                                            <p class="lead fw-normal mb-0">' . $row->title . '</p>
+                                        </li>
+                                        <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
+                                            <div class="d-flex flex-row justify-content-end mb-1">
+                                                <a href="edit task.php?id=' . $row->id . '" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
+                                                            class="fas fa-pencil-alt me-3"></i></a>
+                                                <a href="../../app/delete task.php?id=' . $row->id . '" class="text-success" data-mdb-toggle="tooltip" title="Delete todo"><i
+                                                            class="fa-solid fa-check"></i></a>
+                                            </div>
+                                        </li>
+                                    </ul>';}}?>
                     </div>
                 </div>
             </div>
