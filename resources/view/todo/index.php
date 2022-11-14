@@ -29,8 +29,8 @@
                     <div class="card-body py-4 px-4 px-md-5">
 
                         <p class="h1 text-center mt-3 mb-4 pb-3 text-primary">
-                            <i class="fas fa-check-square me-1"></i>
-                            <u>My Todo list</u>
+                            <i class="fa-sharp fa-solid fa-plus"></i>
+                            <u>Add new task...</u>
                         </p>
 
                         <div class="pb-2">
@@ -84,7 +84,7 @@
                                         </li>
                                         <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
                                             <div class="d-flex flex-row justify-content-end mb-1">
-                                                <a href="http://'.$_SERVER['SERVER_NAME'].'/app/editTask.php?id=' . $row->id . '" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
+                                                <a href="http://'.$_SERVER['SERVER_NAME'].'/resources/view/todo/edit.php?id=' . $row->id . '&title=' . $row->title . '" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
                                                             class="fas fa-pencil-alt me-3"></i></a>
                                                 <a href="http://'.$_SERVER['SERVER_NAME'].'/app/deleteTask.php?id=' . $row->id . '" class="text-success" data-mdb-toggle="tooltip" title="Delete todo"><i
                                                             class="fa-solid fa-check"></i></a>

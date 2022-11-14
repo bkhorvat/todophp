@@ -65,7 +65,7 @@
                                 <a class="nav-link dropdown-toggle hidden-arrow d-flex align-items-center" href="#"
                                    id="navbarDropdownMenuLink" role="button" data-mdb-toggle="dropdown"
                                    aria-expanded="false">
-                                    <img src="https://mdbootstrap.com/img/new/avatars/2.jpg" class="rounded-circle"
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPoAJ0jJpb24AFIkHZ4RfZTXFAHLLjxm33Fg&usqp=CAU" class="rounded-circle"
                                          height="22" alt="Avatar"
                                          loading="lazy"/>
                                 </a>
