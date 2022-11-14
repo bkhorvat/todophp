@@ -9,7 +9,7 @@ $title = $_POST['title'];
 $user_id = $_COOKIE['id'];
 $id = $_POST['id'];
 
-require $_SERVER['DOCUMENT_ROOT'] . '/database/PDO config DB.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/database/pdoConfig.php';
 
 $sql = "UPDATE tasks SET title=:title,  WHERE id=:id";
 $query = $pdo->prepare($sql);

@@ -36,7 +36,7 @@
                         <div class="pb-2">
                             <div class="card">
                                 <div class="card-body">
-                                    <form action="/app/add task.php" method="post">
+                                    <form action="<?php echo 'http://'.$_SERVER['SERVER_NAME'].'/app/addTask.php' ?>" method="post">
                                         <div class="d-flex flex-row align-items-center">
                                             <input type="text" class="form-control form-control-lg"
                                                    id="title" name="title"
@@ -69,7 +69,7 @@
                                         class="fas fa-sort-amount-down-alt ms-2"></i></a>
                         </div>
                         <?php
-                        require $_SERVER['DOCUMENT_ROOT'] . '/database/PDO config DB.php';
+                        require $_SERVER['DOCUMENT_ROOT'] . '/database/pdoConfig.php';
 
                         $user_id = $_COOKIE['id'];
 
@@ -84,9 +84,9 @@
                                         </li>
                                         <li class="list-group-item ps-3 pe-0 py-1 rounded-0 border-0 bg-transparent">
                                             <div class="d-flex flex-row justify-content-end mb-1">
-                                                <a href="edit task.php?id=' . $row->id . '" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
+                                                <a href="http://'.$_SERVER['SERVER_NAME'].'/app/editTask.php?id=' . $row->id . '" class="text-info" data-mdb-toggle="tooltip" title="Edit todo"><i
                                                             class="fas fa-pencil-alt me-3"></i></a>
-                                                <a href="../../app/delete task.php?id=' . $row->id . '" class="text-success" data-mdb-toggle="tooltip" title="Delete todo"><i
+                                                <a href="http://'.$_SERVER['SERVER_NAME'].'/app/deleteTask.php?id=' . $row->id . '" class="text-success" data-mdb-toggle="tooltip" title="Delete todo"><i
                                                             class="fa-solid fa-check"></i></a>
                                             </div>
                                         </li>

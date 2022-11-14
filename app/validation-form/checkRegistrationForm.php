@@ -1,6 +1,6 @@
 <?php
 
-require $_SERVER['DOCUMENT_ROOT'] . '/database/Mysqli config DB.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/database/mysqliConfig.php';
 
   $email = filter_var(trim($_POST['email']), FILTER_VALIDATE_EMAIL);
   $name = trim($_POST['name']);

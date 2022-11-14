@@ -17,11 +17,11 @@
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <?php if (array_key_exists('id', $_COOKIE)): ?>
                         <li class="nav-item active">
-                            <a class="nav-link" aria-current="page" href="home.php">Home</a>
+                            <a class="nav-link" aria-current="page" href="<?php echo 'http://'.$_SERVER['SERVER_NAME'].'/resources/view/todo/index.php' ?>">Home</a>
                         </li>
                     <?php endif; ?>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php">About</a>
+                        <a class="nav-link" href="<?php echo 'http://'.$_SERVER['SERVER_NAME'].'/resources/view/about.php' ?>">About</a>
                     </li>
                 </ul>
 
@@ -29,10 +29,10 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <?php if (!array_key_exists('id', $_COOKIE)): ?>
                             <li class="nav-item">
-                                <a class="nav-link" href="login.php">Sign in</a>
+                                <a class="nav-link" href="<?php echo 'http://'.$_SERVER['SERVER_NAME'].'/resources/view/todo/index.php' ?>">Sign in</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="registration.php">Register</a>
+                                <a class="nav-link" href="<?php echo 'http://'.$_SERVER['SERVER_NAME'].'/resources/view/auth/registration.php' ?>">Register</a>
                             </li>
                         <?php endif; ?>
                         <?php if (array_key_exists('id', $_COOKIE)): ?>
@@ -72,7 +72,7 @@
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownMenuLink">
                                     <li><a class="dropdown-item" href="#">My profile</a></li>
                                     <li><a class="dropdown-item" href="#">Settings</a></li>
-                                    <li><a class="dropdown-item" href="/app/log out.php">Logout</a></li>
+                                    <li><a class="dropdown-item" href="<?php echo 'http://'.$_SERVER['SERVER_NAME'].'/app/logOut.php' ?>">Logout</a></li>
                                 </ul>
                             </li>
                         <?php endif; ?>
@@ -93,11 +93,11 @@
 
 <?php if (!array_key_exists('id', $_COOKIE)
     &&
-    ($_SERVER['REQUEST_URI'] != '/resources/view/login.php'
-        && $_SERVER['REQUEST_URI'] != '/resources/view/registration.php'
+    ($_SERVER['REQUEST_URI'] != '/resources/view/auth/login.php'
+        && $_SERVER['REQUEST_URI'] != '/resources/view/auth/registration.php'
         && $_SERVER['REQUEST_URI'] != '/'
         && $_SERVER['REQUEST_URI'] != '/resources/view/about.php')) {
-    header('Location: /resources/view/login.php');
+    header('Location: /resources/view/auth/login.php');
 }
 
 ?>

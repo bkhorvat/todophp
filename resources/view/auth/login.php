@@ -80,7 +80,7 @@ if (!array_key_exists('id', $_COOKIE)):
             </div>
         </div>
         <?php else: ?>
-            <?php header('Location: /resources/view/home2.php'); ?>
+            <?php header('Location: /resources/view/todo/home2.php'); ?>
         <?php endif; ?>
     </div>
 </main>

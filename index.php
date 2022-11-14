@@ -1,3 +1,3 @@
 <?php
 
-header('Location: /resources/view/home.php');
+header('Location: /resources/view/todo/index.php');

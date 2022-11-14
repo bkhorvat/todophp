@@ -18,7 +18,7 @@
                     </a>
                     <div class="list-group list-group-flush border-bottom scrollarea">
                         <?php
-                        require $_SERVER['DOCUMENT_ROOT'] . '/database/PDO config DB.php';
+                        require $_SERVER['DOCUMENT_ROOT'] . '/database/pdoConfig.php';
 
                         $user_id = $_COOKIE['id'];
                         $id = $_GET['id'];
@@ -29,7 +29,7 @@
                                 echo '
                         <div>
                         <a href="home2.php" class="link-secondary"><small>Назад</small></a>
-                        <a href="../../app/delete task.php?id=' . $row->id . '" class="link-danger"><small>Удалить</small></a>
+                        <a href="../../app/deleteTask.php?id=' . $row->id . '" class="link-danger"><small>Удалить</small></a>
                         </div>
                         <a href="#" class="list-group-item list-group-item-action py-3 lh-tight" aria-current="true">
                         <div class="row d-flex w-100 align-items-center justify-content-between">
@@ -67,7 +67,7 @@
             </div>
 
             <div class="col">
-                <form action="/app/edit task.php" method="post">
+                <form action="/app/editTask.php" method="post">
                     <input type="text" name="id" id="id" hidden value="<?php echo "$id"; ?>">
                     <input type="text" name="title" id="title" placeholder="Заголовок" class="form-control"
                            value="<?php echo "$title"; ?>">

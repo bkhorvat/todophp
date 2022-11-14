@@ -1,5 +1,5 @@
 <?php
-require $_SERVER['DOCUMENT_ROOT'] . '/database/Mysqli config DB.php';
+require $_SERVER['DOCUMENT_ROOT'] . '/database/mysqliConfig.php';
 
   $email = trim($_POST['email']);
   $pass = trim($_POST['pass']);
