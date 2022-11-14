@@ -1,4 +1,4 @@
-<?php include $_SERVER['DOCUMENT_ROOT'] . "/resources/view/template/head template.php" ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/resources/view/layout/head.php" ?>
 
 <head>
     <title>Форма регистрации</title>
@@ -6,9 +6,9 @@
 
 <body>
 
-<?php include $_SERVER['DOCUMENT_ROOT'] . "/resources/view/template/header template.php" ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . "/resources/view/layout/header.php" ?>
 
-<div class="container text-center">
+<div class="container text-center mt-5">
 
     <?php
     if (!array_key_exists('id', $_COOKIE)):
@@ -27,7 +27,26 @@
                     <input type="text" name="name" id="name" class="form-control" placeholder="Введите имя"><br>
                     <input type="password" name="pass" id="pass" class="form-control" placeholder="Введите пароль"><br>
                     <button type="submit" name="button" class="w-100 btn btn-lg btn-primary">Зарегистрировать</button>
-                    <p class="mt-5 mb-3 text-muted">© 2021 - 2022</p>
+
+                    <!-- Register buttons -->
+                    <div class="text-center">
+                        <p class="mt-3">or registration with:</p>
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-facebook-f"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-google"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-twitter"></i>
+                        </button>
+
+                        <button type="button" class="btn btn-primary btn-floating mx-1">
+                            <i class="fab fa-github"></i>
+                        </button>
+                    </div>
                 </form>
             </div>
 
