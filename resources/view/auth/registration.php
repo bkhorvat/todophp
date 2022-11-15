@@ -21,7 +21,7 @@
 
             <div class="col mt-5">
                 <h1 class="h3 mb-3 fw-normal">Register</h1>
-                <form action="../../../app/validation-form/check%20registration%20form.php" method="post">
+                <form action="<?php echo 'http://'.$_SERVER['SERVER_NAME'] . '/app/validation-form/checkRegistrationForm.php' ?>" method="post">
                     <input type="text" name="name" id="name" class="form-control" placeholder="Name"><br>
                     <input type="email" name="email" id="email" class="form-control" placeholder="Email"><br>
                     <input type="password" name="pass" id="pass" class="form-control" placeholder="Password"><br>

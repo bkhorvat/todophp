@@ -21,7 +21,7 @@ if (!array_key_exists('id', $_COOKIE)):
             </div>
 
             <div class="col mt-5">
-                <form action="/app/validation-form/auth.php" method="post">
+                <form action="<?php echo 'http://'.$_SERVER['SERVER_NAME'] . '/app/validation-form/auth.php' ?>" method="post">
                     <!-- Email input -->
                     <div class="form-outline mb-4">
                         <input type="email" id="email" name="email" class="form-control"/>
